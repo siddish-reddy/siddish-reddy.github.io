@@ -1,0 +1,154 @@
+body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1ff;
+    /* The following line for fluid typography's logic is based upon article from:
+        https://www.madebymike.com.au/writing/precise-control-responsive-typography/
+     */
+    font-size: calc(14px + (24 - 14) * ((100vw - 300px) / 726));
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+header {
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: 4px solid #8da7bf;
+     background-color: white;
+     padding: 0 0 5px 0;
+ }
+
+#dp {
+      height: 7.5em;
+      width: 7.5em;
+      border-radius: 50%;
+      filter: brightness(130%);
+  }
+
+img {
+    max-width: 100%;
+}
+
+#name {
+    font-weight: 300;
+    color: #2196f3;
+}
+
+#bio {
+    align-self: flex-end;
+    font-weight: 400;
+}
+
+.card {
+    padding: 3px;
+    width: 150px;
+    border-radius: 5px;
+    border: 1px solid rgba(25, 130, 220, 0.5);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.12), 0 2px 3px rgba(0,0,0,0.24);
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+.card > img {
+     width: 150px;
+     height: 150px;
+ }
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+h3 {
+    color: rgb(16, 45, 67);
+}
+
+figcaption {
+    text-align: center;
+    margin-top: 3px;
+    font-size: 0.75rem;
+}
+
+.edu {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+
+.college {
+    margin-left: 10px;
+}
+
+.college-pic {
+    height: 75px;
+    width: 75px;
+    max-width: 150px;
+    margin: 0 5px;
+}
+
+.projects, .achievements {
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #8da7bf;
+	justify-content: center;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Media query for wide display devices larger than tablets*/
+@media screen and (min-width: 907px) {
+	
+    .wrapper {
+        flex-flow: row wrap;
+    }
+	
+    header {
+        order: 1;
+        flex: 1 0 100%;
+    }
+
+    #zero-to-one {
+        order: 3;
+        align-self: flex-end;
+		flex-grow: 1;
+		max-width: 80vw;
+    }
+
+    .aside {
+        width: 165px;
+        order: 2;
+        align-self: flex-start;
+        height: 100%;
+    }
+
+    body >section {
+        order: 4;
+		width:100%;
+		align-self: center;
+    }
+
+    footer {
+        order: 5;
+        flex-basis: 100%;
+    }
+	
+	#dp {
+		height: 6em;
+		width: 6em;
+	}
+}
