@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,  minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Siddish Reddy, contact:siddish[at]gmail[dot]com">
+    <meta name="description" content="Udacity Project - Memory Game">
+    <meta property="og:site_name" content="Portfolio of Siddish Reddy">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Portfolio">
+    <meta property="og:description" content="Udacity Project - Memory Game">
+	<title>Matching Game</title>
+	<link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+	<link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+
+	<div class="container">
+		<header>
+			<h1>Matching Game</h1>
+		</header>
+
+		<section class="score-panel">
+			<ul class="stars">
+				<li><i class="fa fa-star"></i></li>
+				<li><i class="fa fa-star"></i></li>
+				<li><i class="fa fa-star"></i></li>
+			</ul>
+
+			<span class="moves">0</span> Moves
+
+			<div id="timer">
+				<span id="min">0</span> min :
+				<span id="sec">0</span> s
+			</div>
+			<div id="restart">
+				<i class="fa fa-repeat"></i>
+			</div>
+
+		</section>
+
+		<ul id="deck">
+			<li class="card">
+				<i class="fa fa-diamond"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-paper-plane-o"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-anchor"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-bolt"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-cube"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-anchor"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-leaf"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-bicycle"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-diamond"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-bomb"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-leaf"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-bomb"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-bolt"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-bicycle"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-paper-plane-o"></i>
+			</li>
+			<li class="card">
+				<i class="fa fa-cube"></i>
+			</li>
+		</ul>
+	</div>
+	<!-- TODO: Adding nice table for showing past scores-->
+	<div class="popup-content">
+		<h2 id="title">Congratulations</h2>
+		<i class="fa fa-trophy"></i>
+		<ul id="stars"></ul>
+		<div id="replay">
+			Play Again
+			<i class="fa fa-repeat"></i>
+		</div>
+	</div>
+	<script src="js/app.js"></script>
+</body>
+
+</html>
