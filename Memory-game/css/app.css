@@ -69,7 +69,6 @@ h1 {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin: 0 0 3em;
 }
 
 #deck .card {
@@ -112,7 +111,7 @@ h1 {
 #deck .card.match {
 	cursor: default;
 	background: #02ccba;
-	font-size: 33px;
+	font-size: 40px;
 	-webkit-animation: match-anim 800ms ease-out;
 	animation: match-anim 800ms ease-out;
 }
@@ -246,8 +245,12 @@ h1 {
 	margin-left: 20px;
 }
 
+.fa-repeat {
+	font-size: 25px;
+}
+
 .fa-repeat:hover {
-	font-size: 20px;
+	font-size: 30px;
 	font-weight: bold;
 }
 
@@ -266,7 +269,7 @@ h1 {
 	text-align: center;
 }
 
-.popup-content i[class ~='fa-trophy'] {
+.popup-content i[class ~ ='fa-trophy'] {
 	font-size: 50px;
 	color: #02ccba;
 	display: block;
@@ -276,6 +279,8 @@ h1 {
 
 #stars {
 	padding: 0;
+	margin-top: 10px;
+	margin-bottom: 20px;
 	font-size: 40px;
 	list-style: none;
 	display: inline-block;
@@ -288,12 +293,21 @@ h1 {
 	display: inline-block;
 }
 
+#time-taken {
+	margin-top: 15px;
+	font-weight: bold;
+	font-style: italic;
+}
+
+#time-taken::before {
+	content: "It took:  ";
+}
+
 #replay {
 	background: limegreen;
 	border-radius: 10px;
 	padding: 5px;
-	width: 30%;
-	margin: 5px auto;
+	margin: 5px 20%;
 	cursor: pointer;
 }
 
@@ -351,5 +365,80 @@ h1 {
 	100% {
 		-webkit-transform: scale(1);
 		transform: scale(1);
+	}
+}
+
+@media screen and (max-width:700px) {
+	#deck {
+		width: 480px;
+		min-height: 480px;
+		padding: 20px 20px;
+	}
+
+	#deck .card {
+		height: 90px;
+		width: 90px;
+	}
+
+	.popup-content {
+		left: 10%;
+		width: 80%;
+	}
+}
+
+@media screen and (min-width:375px) and (max-width:500px) {
+	#deck {
+		width: 350px;
+		min-height: 380px;
+		padding: 32px 30px;
+	}
+
+	#deck .card {
+		height: 60px;
+		width: 60px;
+	}
+
+	.show,
+	.match {
+		font-size: 30px !important;
+	}
+}
+
+/* Targetting 360px width users: extra small phones*/
+
+@media screen and (max-width:400px) {
+	#deck {
+		width: 320px;
+		min-height: 360px;
+		padding: 20px;
+	}
+
+	#deck .card {
+		height: 60px;
+		width: 60px;
+	}
+
+	.score-panel {
+		width: 300px;
+	}
+
+	.show,
+	.match {
+		font-size: 30px !important;
+	}
+}
+
+@media screen and (max-width:320px) {
+	.score-panel {
+		width: 90%;
+	}
+	#deck {
+		width: 90%;
+		min-height: 310px;
+		padding: 10px;
+	}
+	#deck .card {
+		height: 50px;
+		width: 22%;
 	}
 }
