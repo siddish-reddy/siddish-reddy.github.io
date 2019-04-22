@@ -46,7 +46,11 @@ img {
     align-self: flex-end;
     font-weight: 400;
 }
-
+.note {
+    font-size: medium;
+    color: rebeccapurple;
+    text-align: center;
+}
 .card {
     padding: 3px;
     width: 150px;
